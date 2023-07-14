@@ -19,6 +19,7 @@ Prima la logica in italiano e poi traduciamo in codice.
 E ricordiamoci che console.log() è nostro amico!
 Buon lavoro!*/
 
+//I create the array with members and they keys with values
 const teamMembers = [
     {
         firstName: "Wayne",
@@ -58,10 +59,16 @@ const teamMembers = [
     },
 ];
 
+/*I create a for cycle that points to a team member object in the teamMembers array from index 0
+until reaching the array max length*/
 for (let i = 0; i < teamMembers.length; i++){
     const singleMember = teamMembers[i];
     console.log(`Team member #: ${i+1}`)
+
+    /*I create a for..in cycle that console prints both the key and its value for each key-value 
+    pair for each team member cycled in the father for cycle*/
     for (const key in teamMembers[i]){
         console.log(`${key}: ${singleMember[key]}`);
     }
 }
+
