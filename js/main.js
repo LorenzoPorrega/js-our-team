@@ -59,6 +59,8 @@ const teamMembers = [
     },
 ];
 
+let row = document.querySelector(".row");
+
 /*I create a for cycle that points to a team member object in the teamMembers array from index 0
 until reaching the array max length*/
 for (let i = 0; i < teamMembers.length; i++){
@@ -69,6 +71,21 @@ for (let i = 0; i < teamMembers.length; i++){
     pair for each team member cycled in the father for cycle*/
     for (const key in teamMembers[i]){
         console.log(`${key}: ${singleMember[key]}`);
-    }
-}
+    };
+
+    /*I created an innerHTML on the row I querySelected above and I print
+    consequentially all the team members' informations with ${constDesired}
+    + html to visually each team member's card*/
+    row.innerHTML += `<div class="col-lg-4 col-md-6 col-12 d-flex justify-content-center">
+                        <div class="card">
+                            <img src="img/${singleMember.profilePic}" class="card-img-top" alt="...">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item fw-bold fs-2 text-success">${singleMember.firstName} ${singleMember.lastName}</li>
+                                <li class="list-group-item fw-bold fs-5 text-primary">${singleMember.role}</li>
+                            </ul>
+                        </div>
+                    </div>`;
+};
+
+
 
