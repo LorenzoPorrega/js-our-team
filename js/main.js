@@ -60,7 +60,7 @@ const teamMembers = [
 
 for (let i = 0; i < teamMembers.length; i++){
     const singleMember = teamMembers[i];
-    console.log(`Team member #: ${i}`)
+    console.log(`Team member #: ${i+1}`)
     for (const key in teamMembers[i]){
         console.log(`${key}: ${singleMember[key]}`);
     }
